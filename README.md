@@ -58,3 +58,29 @@ data['Ship_Date'] = pd.to_datetime(data['Ship_Date'])
 
 # Save the cleaned data
 data.to_csv('cleaned_data.csv', index=False)
+```
+---
+
+## Data Cleaning with SQL
+
+### Overview
+This project focuses on cleaning, transforming, and normalizing the SuperSell dataset using Google BigQuery. The dataset contains information related to customers, orders, shipments, locations, and Products. The cleaning process ensures data consistency, removes duplicates, and structures the dataset into well-defined tables for better analysis and performance.
+
+### Steps involved in cleaning the data using SQL:
+1. **Feature Engineering**:
+   - Created `LOCATION_ID` by concatenating `COUNTRY`, `REGION`, and `CITY`.
+   - Generated `SHIP_ID` using the first three letters of `Ship_Mode` and `ROW_ID`.
+2. **Handling Missing Values**: Checked for and ensured no missing values in key fields (`Customer_ID`, `Product_ID`, `Location_ID`, `Ship_ID`).
+3. **Fixing Data Inconsistencies**:
+   - Converted `CUSTOMER_NAME`, `CATEGORY`, `CITY`, `REGION`, and `COUNTRY` to uppercase.
+   - Corrected negative values in `SALES`, `QUANTITY`, and `SHIPPING_COST`.
+4. **Normalization**: Created separate tables for `ORDERS`, `CUSTOMERS`, `PRODUCTS`, `LOCATION`, and `SHIPMENT`.
+
+Example SQL Query for Fixing Negative Values:
+```sql
+UPDATE platinum-goods-452923-t1.SuperSell.Cleaned_data
+SET SALES = ABS(SALES),
+    SHIPPING_COST = ABS(SHIPPING_COST),
+    QUANTITY = ABS(QUANTITY)
+WHERE SALES < 0 OR SHIPPING_COST < 0 OR QUANTITY < 0;
+```
