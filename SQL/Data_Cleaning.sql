@@ -1,3 +1,4 @@
+-- Preview the Cleaned_data Table
 SELECT *
 FROM platinum-goods-452923-t1.SuperSell.Cleaned_data;
 
