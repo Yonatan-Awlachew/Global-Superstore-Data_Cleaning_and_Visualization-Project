@@ -8,8 +8,6 @@ This project demonstrates a full data analysis, from **data cleaning** using **P
 3. [Data Cleaning with Python](#data-cleaning-with-python)
 4. [Data Cleaning with SQL](#data-cleaning-with-sql)
 5. [Creating a Dashboard with Tableau](#creating-a-dashboard-with-tableau)
-6. [License](#license)
-
 ---
 
 ## Project Overview
@@ -84,3 +82,12 @@ SET SALES = ABS(SALES),
     QUANTITY = ABS(QUANTITY)
 WHERE SALES < 0 OR SHIPPING_COST < 0 OR QUANTITY < 0;
 ```
+## Creating a Dashboard with Tableau
+
+### Overview
+The cleaned data was then used to build an interactive dashboard in Tableau. The dashboard presents key insights into sales, customer demographics, order trends, and product performance.
+
+### Tableau Dashboard:
+Here’s a screenshot of the interactive Tableau dashboard created for this project:
+
+![Tableau Dashboard Screenshot](tableau_dashboard.png)
