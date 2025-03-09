@@ -90,7 +90,8 @@ The cleaned data was then used to build an interactive dashboard in Tableau. The
 ### Tableau Dashboard:
 Here’s a screenshot of the interactive Tableau dashboard created for this project:
 
-You can also explore the live dashboard by following this [link to the Tableau Dashboard]([your_tableau_link_here](https://public.tableau.com/app/profile/yonatan.firde/viz/GlobalSuperStoreVisualization_17414888442700/MainDASHBOARD)).
+You can also explore the live dashboard by following this [link to the Tableau Dashboard](https://public.tableau.com/app/profile/yonatan.firde/viz/GlobalSuperStoreVisualization_17414888442700/MainDASHBOARD).
+
 
 ![Tableau Dashboard Screenshot](tableau_dashboard.png)
 
