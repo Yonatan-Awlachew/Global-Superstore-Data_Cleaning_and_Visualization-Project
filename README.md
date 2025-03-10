@@ -32,16 +32,15 @@ This project is focused on cleaning and visualizing data to help uncover trends,
 ## Data Cleaning with Python
 
 ### Steps involved in cleaning the data using Python:
-1. **Loading Data**: We start by loading raw data into a Pandas DataFrame.
-2. **Handling Missing Values**: Missing or `NaN` values are filled or removed.
-3. **Date and Time Conversion**: Ensure that `Order_Date` and `Ship_Date` are converted to `datetime` types.
+1. **Loading Data**: I start by loading raw data into a Pandas DataFrame.
+2. **Handling Missing Values**: I Checked for missing or `NaN` values to be removed.
+3. **Date and Time Conversion**: `Order_Date` and `Ship_Date` are converted to `datetime` types.
 4. **Data Transformation**: Column names with the dot are replaced with underscores
-5. **Handling Duplicates**: Check for and drop any duplicate rows.
-6. **Data Type Conversion**: Ensure the columns have the correct data types (e.g., `float64` for numeric columns).
-7. **Feature Engineering**: Remove unnecessary columns.
-8. **Saving Cleaned Data**: Save the cleaned dataset for further analysis or upload to SQL.
+5. **Handling Duplicates**: Checked for duplicates and dropped any duplicated rows.
+6. **Feature Engineering**: Remove unnecessary columns.
+7. **Saving Cleaned Data**: Save the cleaned dataset for further analysis or upload to SQL.
 
-Example code for loading the data, change the datatype and sve the cleaned File:
+Example code for loading the data, changing the datatype and saving the cleaned File:
 ```python
 import pandas as pd
 
@@ -92,7 +91,8 @@ Here’s a screenshot of the interactive Tableau dashboard created for this proj
 
 You can also explore the live dashboard by following this [link to the Tableau Dashboard](https://public.tableau.com/app/profile/yonatan.firde/viz/GlobalSuperStoreVisualization_17414888442700/MainDASHBOARD).
 
+![Tableau Home Dashboard Screenshot](Home_Dashboard.png)
 
-![Tableau Dashboard Screenshot](tableau_dashboard.png)
+![Tableau SalesDashboard Screenshot](tableau_dashboard.png)
 
 
