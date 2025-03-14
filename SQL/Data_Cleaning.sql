@@ -2,7 +2,7 @@
 SELECT *
 FROM platinum-goods-452923-t1.SuperSell.Cleaned_data;
 
-
+-- Preview the distinct CITY, REGION, STATE, COUNTRY 
 SELECT DISTINCT CITY, REGION, STATE, COUNTRY
 FROM platinum-goods-452923-t1.SuperSell.Cleaned_data;
 
@@ -86,7 +86,7 @@ FROM platinum-goods-452923-t1.SuperSell.Cleaned_data;
         GROUP BY Customer_Name
         HAVING COUNT(DISTINCT Customer_ID) > 1;
 
-    -- So Lets fix it by assignining the earliest customer id to each customer name
+    -- So Let's fix it by assigning the earliest customer ID to each customer name
 
         UPDATE platinum-goods-452923-t1.SuperSell.Cleaned_data AS C1
         SET Customer_ID = 
@@ -115,13 +115,13 @@ FROM platinum-goods-452923-t1.SuperSell.Cleaned_data;
         FROM platinum-goods-452923-t1.SuperSell.CUSTOMERS; 
 
   -- C- PRODUCTS TABLE
-    -- Lets Check if a PRODUCT has more than 1 PRODUCT_ID
+    -- Let's Check if a PRODUCT has more than 1 PRODUCT_ID
       SELECT PRODUCT_NAME, COUNT(DISTINCT PRODUCT_ID) AS ID_Count
       FROM platinum-goods-452923-t1.SuperSell.Cleaned_data
       GROUP BY PRODUCT_NAME
       HAVING COUNT(DISTINCT PRODUCT_ID) > 1;
 
-    -- So Lets fix it by assignining the earliest product id to each product name
+    -- So Let's fix it by assigning the earliest product ID to each product name
 
       UPDATE platinum-goods-452923-t1.SuperSell.Cleaned_data AS P1
       SET PRODUCT_ID = 
